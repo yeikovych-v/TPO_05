@@ -16,20 +16,12 @@ public class NumberSystemConversionController {
 
         String converted = Integer.toString(decimal, to);
 
-        StringBuilder conversionHeader = new StringBuilder();
-
-        conversionHeader.append("<h3> Your Value in '").append(from)
-                .append("' digit system is, in '").append(to)
-                .append("' digit system: <h3><h4>").append(converted).append("</h4>");
-
-        conversionHeader.append("<h5>").append("In Binary: ").append(Integer.toBinaryString(decimal)).append("</h5>");
-
-        conversionHeader.append("<h5>").append("In Octal: ").append(Integer.toOctalString(decimal)).append("</h5>");
-
-        conversionHeader.append("<h5>").append("In Decimal: ").append(decimal).append("</h5>");
-
-        conversionHeader.append("<h5>").append("In Hexadecimal: ").append(Integer.toHexString(decimal)).append("</h5>");
-
-        return conversionHeader.toString();
+        return "<h3> Your Value in '" + from +
+                "' digit system is, in '" + to +
+                "' digit system: <h3><h4>" + converted + "</h4>" +
+                "<h5>" + "In Binary: " + Integer.toBinaryString(decimal) + "</h5>" +
+                "<h5>" + "In Octal: " + Integer.toOctalString(decimal) + "</h5>" +
+                "<h5>" + "In Decimal: " + decimal + "</h5>" +
+                "<h5>" + "In Hexadecimal: " + Integer.toHexString(decimal) + "</h5>";
     }
 }
